@@ -7,6 +7,7 @@ const PORT = 2121
 const app = express()
 const url = 'https://www.bbc.co.uk'
 
+
 axios(url)
     .then(response => {
         const html = response.data
@@ -21,8 +22,12 @@ axios(url)
             })
         })
         console.log(articles)
+        
+        
+        
 
 
     }).catch(err => console.log(err))
 
 app.listen(PORT, ()=> console.log(`Server running on PORT ${PORT}`))
+
